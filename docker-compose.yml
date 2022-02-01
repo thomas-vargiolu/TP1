@@ -1,0 +1,25 @@
+version: '3.3'
+services:
+  java:
+    build: 
+      ./java/simple-api-main/simple-api
+    networks:
+      - reseau
+    depends_on:
+      - database
+  database:
+    build: 
+      ./database/  
+    networks:
+      - reseau
+  apache:
+    build: 
+      ./Apache/   
+    ports:
+      - 80:80
+    networks:
+      - reseau
+    depends_on:
+      - java
+networks:
+  reseau:
