@@ -3,6 +3,7 @@ ENV MYAPP_HOME /opt/myapp
 WORKDIR $MYAPP_HOME
 COPY pom.xml .
 COPY src ./src
+RUN mvn dependency:go-offline
 RUN mvn package -DskipTests
 # Run
 FROM openjdk:11-jre
