@@ -15,5 +15,5 @@ jobs:
         #TODO
 #finally build your app with the latest command
       - name: Build and test with Maven
-        run: 
+        run: mvn clean verify
         #TODO
