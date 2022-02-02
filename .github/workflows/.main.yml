@@ -10,6 +10,8 @@ on:
       
   pull_request:
 jobs:
+  env:
+    GITHUB_TOKEN: ${{ secrets.GITHUBTOKEN }}
   test-backend:
     runs-on: ubuntu-18.04
     steps:
@@ -23,8 +25,7 @@ jobs:
           distribution: 'adopt'
 #finally build your app with the latest command
       - name: Build and test with Maven
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUBTOKEN }}
+        
         run: mvn -B verify sonar:sonar -Dsonar.projectKey=thomas-vargiolu_TP1 -Dsonar.organization=thomas-vargiolu -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{secrets.SONAR}} --file ./java/simple-api-main/simple-api/pom.xml
 
 
