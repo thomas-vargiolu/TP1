@@ -20,5 +20,8 @@ jobs:
           distribution: 'adopt'
 #finally build your app with the latest command
       - name: Build and test with Maven
-        working-directory : /home/runner/work/TP1/java/simple-api/simple-api
-        run: mvn clean verify
+        run: mvn clean verify --file java/simple-api/simple-api
+
+
+
+        
