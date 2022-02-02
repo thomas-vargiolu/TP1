@@ -1,3 +1,5 @@
+
+#GITHUB_TOKEN
 name: CI devops 2022 CPE
 on:
   #to begin you want to launch this job in main and develop
@@ -21,6 +23,8 @@ jobs:
           distribution: 'adopt'
 #finally build your app with the latest command
       - name: Build and test with Maven
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUBTOKEN }}
         run: mvn -B verify sonar:sonar -Dsonar.projectKey=thomas-vargiolu_TP1 -Dsonar.organization=thomas-vargiolu -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{secrets.SONAR}} --file ./java/simple-api-main/simple-api/pom.xml
 
 
