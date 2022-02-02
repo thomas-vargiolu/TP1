@@ -31,10 +31,10 @@ jobs:
   # steps to perform in job
     steps:
       - name: Checkout code
-      uses: actions/checkout@v2
+        uses: actions/checkout@v2
 
       - name : Login to DockerHub
-      run : docker login -u ${{ secrets.USER}} -p $ {{secrets.ACCESTOKEN}}
+        run : docker login -u ${{ secrets.USER}} -p $ {{secrets.ACCESTOKEN}}
 
       - name: Build image and push backend
         uses: docker/build-push-action@v2
