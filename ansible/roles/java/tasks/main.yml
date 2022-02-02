@@ -1,0 +1,9 @@
+---
+# tasks file for roles/network
+
+- name: create java
+  docker_container:
+    name: java
+    image: thomasvargiolu/java3:java
+
+

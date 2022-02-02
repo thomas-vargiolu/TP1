@@ -6,3 +6,19 @@
     - name : docker
       import_role:
         name: docker
+    
+    - name : database
+      import_role:
+        name: database
+    
+    - name : java
+      import_role:
+        name: java
+
+    - name : apache
+      import_role:
+        name: apache
+    
+    - name : network
+      import_role:
+        name: network

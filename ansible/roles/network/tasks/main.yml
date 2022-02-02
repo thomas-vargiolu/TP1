@@ -1,0 +1,9 @@
+---
+# tasks file for roles/network
+- name: Network
+  docker_network:
+    name: reseau
+    connected:
+      - java
+      - database
+      - apache

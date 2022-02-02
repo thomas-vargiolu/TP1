@@ -1,0 +1,10 @@
+---
+# tasks file for roles/network
+
+- name: create apache
+  docker_container:
+    name: apache
+    image: thomasvargiolu/apache:apache
+    published_ports : 80:80
+
+

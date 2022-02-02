@@ -1,0 +1,13 @@
+---
+# tasks file for roles/network
+
+- name: create database
+  docker_container:
+    name: database
+    image: thomasvargiolu/database:database
+    env:
+      POSTGRES_DB: 'db'
+      POSTGRES_USER: 'usr'
+      POSTGRES_PASSWORD: 'pwd'
+
+
