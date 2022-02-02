@@ -20,7 +20,7 @@ jobs:
           distribution: 'adopt'
 #finally build your app with the latest command
       - name: Build and test with Maven
-        run: mvn clean verify --file ./TP1/java/simple-api/simple-api
+        run: mvn clean verify --file ./java/simple-api-main/simple-api
 
 
 
