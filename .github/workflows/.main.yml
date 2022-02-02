@@ -57,7 +57,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: ./apache
-          tags: ${{secrets.USER}}/apache:apache
+          tags: ${{secrets.USER}}/Apache:apache
           push: ${{ github.ref == 'refs/heads/main' }}
     
     
